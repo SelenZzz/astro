@@ -5,6 +5,15 @@ return {
   opts = {},
   keys = {
     {
+      "<leader>r",
+      desc = "Refactor",
+    },
+    {
+      "<leader>r",
+      desc = "Refactor",
+      mode = "v",
+    },
+    {
       "<leader>re",
       [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function')<CR>]],
       { silent = true, expr = false },
