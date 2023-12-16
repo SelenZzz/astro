@@ -12,7 +12,7 @@ return {
       lua = { template = { annotation_convention = "ldoc" } },
       typescript = { template = { annotation_convention = "tsdoc" } },
       typescriptreact = { template = { annotation_convention = "tsdoc" } },
-      php = { template = { annotation_convention = "phpdoc"} },
+      php = { template = { annotation_convention = "phpdoc" } },
     },
   },
   keys = {
