@@ -18,14 +18,17 @@ return {
 
       formatting.prettier,
 
-      -- diagnostics.php,
-      -- diagnostics.phpcs,
-      formatting.phpcsfixer,
+      diagnostics.php,
+      formatting.phpcsfixer.with({
+        extra_args = {
+          "--allow-risky=yes",
+        }
+      }),
 
       formatting.stylua,
     }
 
-    config.debug = true
+    config.debug = false
     return config 
   end,
 }
