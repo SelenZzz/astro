@@ -6,10 +6,8 @@ return {
   keys = {
     {
       "<leader>z",
-      function()
-        require("zen-mode").toggle()
-      end,
-      desc = "ZenMode",
+      function() require("zen-mode").toggle() end,
+      desc = "Zen",
     },
   },
   dependencies = {
@@ -29,17 +27,15 @@ return {
   opts = {
     window = {
       backdrop = 1,
-      width = function()
-        return math.min(80, vim.o.columns * 0.75)
-      end,
+      width = function() return math.min(100, vim.o.columns * 0.75) end,
       height = 0.9,
       options = {
         number = false,
-        relativenumber = false,
-        foldcolumn = "0",
+        relativenumber = true,
+        -- foldcolumn = "0",
         list = false,
         showbreak = "NONE",
-        -- signcolumn = "no"
+        signcolumn = "no",
       },
     },
     plugins = {
@@ -48,6 +44,7 @@ return {
         laststatus = 0,
       },
       gitsigns = { enabled = true },
+      twilight = { enabled = false },
     },
     on_open = function() -- disable diagnostics and indent blankline
       vim.g.diagnostics_enabled_old = vim.g.diagnostics_enabled
