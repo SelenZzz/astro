@@ -18,24 +18,24 @@ return {
       },
     },
   },
-  -- {
-  --   "gbprod/phpactor.nvim",
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",
-  --     "neovim/nvim-lspconfig",
-  --   },
-  --   enable = vim.bo.filetype == 'php',
-  --   opts = {
-  --     install = {
-  --       check_on_startup = "always",
-  --     },
-  --   },
-  --   keys = {
-  --     {
-  --       "<leader>ra",
-  --       "<Cmd>PhpActor<CR>",
-  --       desc = "Phpactor",
-  --     },
-  --   },
-  -- },
+  {
+    "gbprod/phpactor.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "neovim/nvim-lspconfig",
+    },
+    enable = vim.bo.filetype == 'php',
+    opts = {
+      install = {
+        check_on_startup = "always",
+      },
+    },
+    keys = {
+      {
+        "<leader>ra",
+        "<Cmd>PhpActor<CR>",
+        desc = "Phpactor",
+      },
+    },
+  },
 }
